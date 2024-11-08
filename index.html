@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="calculator-container" style="max-width: 800px; margin: 0 auto; font-family: system-ui, -apple-system, sans-serif;">
+    <div class="form-group" style="margin-bottom: 1.5rem;">
+        <label style="display: block; font-weight: 500; margin-bottom: 0.5rem;">Initial Capital</label>
+        <div style="position: relative;">
+            <input type="number" id="initial-capital" placeholder="2500" value="" required style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 0.5rem; font-size: 1rem;">
+            <span style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%);">€</span>
+        </div>
+    </div>
+
+    <div class="form-group" style="margin-bottom: 1.5rem;">
+        <label style="display: block; font-weight: 500; margin-bottom: 0.5rem;">Interest Rate</label>
+        <div style="position: relative;">
+            <input type="number" id="interest-rate" placeholder="3" value="" required style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 0.5rem; font-size: 1rem;">
+            <span style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%);">%</span>
+        </div>
+    </div>
+
+    <div class="form-group" style="margin-bottom: 1.5rem;">
+        <label style="display: block; font-weight: 500; margin-bottom: 0.5rem;">Savings Rate</label>
+        <div style="position: relative;">
+            <input type="number" id="savings-rate" placeholder="400" value="" required style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 0.5rem; font-size: 1rem;">
+            <span style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%);">€</span>
+        </div>
+    </div>
+
+    <div class="form-group" style="margin-bottom: 1.5rem;">
+        <label style="display: block; font-weight: 500; margin-bottom: 0.5rem;">Period</label>
+        <div style="position: relative;">
+            <input type="number" id="period" placeholder="7" value="" required style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 0.5rem; font-size: 1rem;">
+            <span style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%);">Years</span>
+        </div>
+    </div>
+
+    <button id="calculate-btn" disabled onclick="calculate()" style="width: 100%; padding: 1rem; background-color: #1e3a8a; color: white; border: none; border-radius: 0.5rem; font-size: 1rem; cursor: pointer; margin-bottom: 2rem;">Calculate</button>
+
+    <div id="arif" style="background-color: white; padding: 1.5rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); display: none;">
+        <div style="display: flex; justify-content: flex-end; margin-bottom: 1rem;">
+            <div id="final-capital" style="background-color: #f8fafc; padding: 0.5rem 1rem; border-radius: 0.5rem;"></div>
+        </div>
+        <canvas id="benefitChart"></canvas>
+    </div>
+</div>
+
+<!-- Include Chart.js -->
+<script data-minify="1" src="https://mojibur.com/wp-content/cache/min/1/npm/chart.js?ver=1730831260" data-rocket-defer defer></script>
+<script src="app.js">
+</script>
+</body>
+</html>
